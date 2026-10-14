@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Gentlemen's Grooming | Premium Barbershop & Lounge</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#" class="logo flex-center">
+        <div class="logo-badge flex-center">A</div>
+        <div class="logo-text">
+          <span class="brand-name">APEX<span class="gold-dot">.</span></span>
+          <span class="brand-sub">Grooming & Club</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#experience">The Experience</a>
+        <a href="#barbers">Master Barbers</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#booking">Contact</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="nav-actions">
+        <button onclick="openModal('vipModal')" class="btn btn-outline">VIP Club</button>
+        <a href="#booking" class="btn btn-gold">Book Appointment</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="#services">Services</a>
+      <a href="#experience">The Experience</a>
+      <a href="#barbers">Master Barbers</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#booking">Contact</a>
+      <div class="mobile-actions">
+        <button onclick="openModal('vipModal')" class="btn btn-outline w-full">Join VIP Club</button>
+        <a href="#booking" class="btn btn-gold w-full text-center">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero flex-center">
+    <div class="hero-content text-center">
+      <span class="badge">
+        <i class="fa-solid fa-scissors"></i> Precision Cuts & Timeless Style
+      </span>
+
+      <h1 class="hero-title">
+        Mastering the art of <span class="gold-italic">gentlemen's grooming.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Experience tailored haircuts, hot-towel straight razor shaves, complimentary craft beverages, and an exclusive lounge designed for modern gentlemen.
+      </p>
+
+      <div class="hero-cta flex-center">
+        <a href="#booking" class="btn btn-gold btn-lg">
+          <i class="fa-regular fa-calendar-check"></i> Book Your Visit
+        </a>
+        <a href="#services" class="btn btn-dark btn-lg">
+          Explore Menu
+        </a>
+      </div>
+
+      <!-- Quick Highlights -->
+      <div class="highlights-grid">
+        <div class="highlight-item flex-center">
+          <div class="icon-box flex-center"><i class="fa-solid fa-whiskey-glass"></i></div>
+          <div>
+            <h4>Bar & Lounge</h4>
+            <p>Complimentary Drinks</p>
+          </div>
+        </div>
+
+        <div class="highlight-item flex-center">
+          <div class="icon-box flex-center"><i class="fa-solid fa-fire-burner"></i></div>
+          <div>
+            <h4>Hot Towel Shave</h4>
+            <p>Traditional Technique</p>
+          </div>
+        </div>
+
+        <div class="highlight-item flex-center">
+          <div class="icon-box flex-center"><i class="fa-solid fa-square-parking"></i></div>
+          <div>
+            <h4>Private Parking</h4>
+            <p>Valet Available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-container">
+    <div class="section-header text-center">
+      <span class="section-tag">Grooming Menu</span>
+      <h2 class="section-title">Services & Pricing</h2>
+      <p class="section-subtitle">Every service includes a consultation, scalp massage, and premium finish.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card flex-between">
+        <div>
+          <div class="card-top flex-between">
+            <div class="card-icon flex-center"><i class="fa-solid fa-scissors"></i></div>
+            <span class="time-tag">45 mins</span>
+          </div>
+          <h3>Signature Haircut</h3>
+          <p>Precision cut, hair wash, scalp massage, hot towel treatment, and style with premium matte clay or pomade.</p>
+        </div>
+        <div class="card-footer flex-between">
+          <span class="price">$55</span>
+          <a href="#booking" class="btn btn-small">Book Service</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card flex-between">
+        <div>
+          <div class="card-top flex-between">
+            <div class="card-icon flex-center"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+            <span class="time-tag">40 mins</span>
+          </div>
+          <h3>Hot Towel Beard Shave</h3>
+          <p>Essential oils treatment, steaming towels, warm lather, precision razor line-up, and soothing aftershave balm.</p>
+        </div>
+        <div class="card-footer flex-between">
+          <span class="price">$45</span>
+          <a href="#booking" class="btn btn-small">Book Service</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card flex-between">
+        <div>
+          <div class="card-top flex-between">
+            <div class="card-icon flex-center"><i class="fa-solid fa-crown"></i></div>
+            <span class="time-tag">75 mins</span>
+          </div>
+          <h3>Executive Combo</h3>
+          <p>Our flagship package: Signature Haircut + Full Beard Sculpting & Razor Shave + Complimentary Single Malt Bourbon.</p>
+        </div>
+        <div class="card-footer flex-between">
+          <span class="price">$90</span>
+          <a href="#booking" class="btn btn-small">Book Service</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card flex-between">
+        <div>
+          <div class="card-top flex-between">
+            <div class="card-icon flex-center"><i class="fa-solid fa-palette"></i></div>
+            <span class="time-tag">45 mins</span>
+          </div>
+          <h3>Beard & Hair Camo Color</h3>
+          <p>Subtle grey blending for hair or beard designed to enhance natural color without a stark dyed look.</p>
+        </div>
+        <div class="card-footer flex-between">
+          <span class="price">$50</span>
+          <a href="#booking" class="btn btn-small">Book Service</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card flex-between">
+        <div>
+          <div class="card-top flex-between">
+            <div class="card-icon flex-center"><i class="fa-solid fa-spa"></i></div>
+            <span class="time-tag">35 mins</span>
+          </div>
+          <h3>Revitalizing Facial</h3>
+          <p>Deep skin cleansing, charcoal detox mask, blackhead removal, hot steam, and invigorating moisturizer.</p>
+        </div>
+        <div class="card-footer flex-between">
+          <span class="price">$60</span>
+          <a href="#booking" class="btn btn-small">Book Service</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card flex-between">
+        <div>
+          <div class="card-top flex-between">
+            <div class="card-icon flex-center"><i class="fa-solid fa-child"></i></div>
+            <span class="time-tag">30 mins</span>
+          </div>
+          <h3>Young Gentleman Cut</h3>
+          <p>Tailored haircuts for boys under 12, crafted with patience, care, and a choice of juice or soda.</p>
+        </div>
+        <div class="card-footer flex-between">
+          <span class="price">$40</span>
+          <a href="#booking" class="btn btn-small">Book Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="section-container grid-2-col flex-center">
+      <div class="experience-text">
+        <span class="section-tag">Beyond a Cut</span>
+        <h2 class="section-title">An exclusive retreat for style, relaxation, and conversation.</h2>
+        <p class="experience-desc">
+          Inspired by 1920s Chicago speakeasies and traditional English barbering, Apex Gentlemen's Grooming pairs leather barber chairs with vinyl music, craft bourbon, and master craftsmanship.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-item flex-center"><i class="fa-solid fa-check"></i> Single Malt Bourbon Bar</div>
+          <div class="feature-item flex-center"><i class="fa-solid fa-check"></i> Imported Italian Products</div>
+          <div class="feature-item flex-center"><i class="fa-solid fa-check"></i> Private Billiards Table</div>
+          <div class="feature-item flex-center"><i class="fa-solid fa-check"></i> High-Speed Wi-Fi</div>
+        </div>
+      </div>
+
+      <div class="experience-gallery">
+        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=600&q=80" alt="Lounge Area">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=600&q=80" alt="Barber at Work" class="img-offset">
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Barbers -->
+  <section id="barbers" class="section-container">
+    <div class="section-header text-center">
+      <span class="section-tag">Craftsmen</span>
+      <h2 class="section-title">Meet Our Master Barbers</h2>
+      <p class="section-subtitle">Decades of combined experience in classic razor work and modern styling.</p>
+    </div>
+
+    <div class="barbers-grid">
+      <div class="barber-card text-center">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Arthur Pendelton">
+        <h3>Arthur Pendelton</h3>
+        <span class="barber-role">Head Barber (12 yrs exp)</span>
+        <p>Specialist in traditional English scissor cuts, pompadours, and sculptured beards.</p>
+        <a href="#booking" class="btn btn-small">Book with Arthur</a>
+      </div>
+
+      <div class="barber-card text-center">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Marcus Sterling">
+        <h3>Marcus Sterling</h3>
+        <span class="barber-role">Fade & Line-Up Specialist</span>
+        <p>Renowned for modern skin fades, sharp razor edges, and custom hair design.</p>
+        <a href="#booking" class="btn btn-small">Book with Marcus</a>
+      </div>
+
+      <div class="barber-card text-center">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Julian Vance">
+        <h3>Julian Vance</h3>
+        <span class="barber-role">Hot Towel Shave Master</span>
+        <p>Expert in facial treatments, hot towel straight razor shaves, and beard therapy.</p>
+        <a href="#booking" class="btn btn-small">Book with Julian</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking Form -->
+  <section id="booking" class="section-container">
+    <div class="booking-box">
+      <div class="section-header text-center">
+        <span class="section-tag">Online Reservation</span>
+        <h2 class="section-title">Schedule Your Visit</h2>
+        <p class="section-subtitle">Select your service, preferred barber, and date for your session.</p>
+      </div>
+
+      <form onsubmit="handleBooking(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required placeholder="e.g. Jonathan Wick">
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" required placeholder="+1 (555) 000-0000">
+          </div>
+        </div>
+
+        <div class="form-row-3">
+          <div class="form-group">
+            <label>Desired Service</label>
+            <select required>
+              <option value="" disabled selected>Select service</option>
+              <option>Signature Haircut ($55)</option>
+              <option>Hot Towel Beard Shave ($45)</option>
+              <option>Executive Combo ($90)</option>
+              <option>Beard & Hair Camo Color ($50)</option>
+              <option>Revitalizing Facial ($60)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Barber Preference</label>
+            <select required>
+              <option value="" disabled selected>Any Barber</option>
+              <option>Arthur Pendelton</option>
+              <option>Marcus Sterling</option>
+              <option>Julian Vance</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Appointment Date</label>
+            <input type="date" required>
+          </div>
+        </div>
+
+        <div class="text-center mt-6">
+          <button type="submit" class="btn btn-gold btn-lg">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="reviews-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What Gentlemen Say</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Hands down the finest barbershop in town. The attention to detail from Marcus is unmatched, and sipping bourbon while waiting is a fantastic bonus."</p>
+          <div class="review-author flex-center">
+            <div class="avatar flex-center">EH</div>
+            <div>
+              <h5>Ethan Harrison</h5>
+              <span>Regular Client</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The Hot Towel Beard Shave with Julian is my ritual before every major business meeting. Authentic experience with top-tier professionalism."</p>
+          <div class="review-author flex-center">
+            <div class="avatar flex-center">DB</div>
+            <div>
+              <h5>David Miller</h5>
+              <span>VIP Member</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Brought my son here for his first proper haircut with Arthur. Great atmosphere, respectful team, and flawless craftsmanship."</p>
+          <div class="review-author flex-center">
+            <div class="avatar flex-center">RC</div>
+            <div>
+              <h5>Robert Carter</h5>
+              <span>Client since 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-container footer-grid">
+      <div class="footer-about">
+        <div class="logo flex-center mb-4">
+          <div class="logo-badge flex-center">A</div>
+          <span class="brand-name">APEX<span class="gold-dot">.</span></span>
+        </div>
+        <p>The premier grooming club for gentlemen who value tradition, timeless style, and uncompromising quality.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Opening Hours</h4>
+        <ul>
+          <li>Monday - Friday: 09:00 AM - 08:00 PM</li>
+          <li>Saturday: 08:00 AM - 06:00 PM</li>
+          <li>Sunday: Closed (Private Events)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services & Menu</a></li>
+          <li><a href="#experience">The Lounge</a></li>
+          <li><a href="#barbers">Master Barbers</a></li>
+          <li><a href="#booking">Book Online</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Location</h4>
+        <p><i class="fa-solid fa-location-dot gold-text"></i> 742 Fifth Avenue, New York, NY</p>
+        <p><i class="fa-solid fa-phone gold-text"></i> +1 (212) 555-0199</p>
+        <p><i class="fa-solid fa-envelope gold-text"></i> contact@apexgrooming.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 Apex Gentlemen's Grooming. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- VIP Modal -->
+  <div id="vipModal" class="modal-overlay hidden flex-center">
+    <div class="modal-content text-center">
+      <button onclick="closeModal('vipModal')" class="modal-close">&times;</button>
+      <div class="vip-badge flex-center">VIP</div>
+      <h3 class="modal-title">Join The VIP Club</h3>
+      <p class="modal-subtitle">Unlimited haircuts, priority booking, and lounge access.</p>
+
+      <form onsubmit="handleVipSubmit(event)">
+        <div class="form-group text-left">
+          <label>Full Name</label>
+          <input type="text" required placeholder="Your Name">
+        </div>
+        <div class="form-group text-left">
+          <label>Email Address</label>
+          <input type="email" required placeholder="your@email.com">
+        </div>
+        <div class="form-group text-left">
+          <label>Phone Number</label>
+          <input type="tel" required placeholder="+1 (555) 000-0000">
+        </div>
+        <button type="submit" class="btn btn-gold w-full mt-4">Apply For Membership ($120/mo)</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast flex-center">
+    <i class="fa-solid fa-circle-check gold-text"></i>
+    <span id="toastMsg">Notification</span>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
